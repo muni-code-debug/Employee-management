@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<h3>Add Employee</h3>
+
+</div>
+
+<div class="card-body">
+
+<form method="POST">
+
+<div class="mb-3">
+
+<label>Name</label>
+
+<input
+type="text"
+name="name"
+class="form-control"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label>Email</label>
+
+<input
+type="email"
+name="email"
+class="form-control"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label>Department</label>
+
+<input
+type="text"
+name="department"
+class="form-control"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label>Salary</label>
+
+<input
+type="number"
+name="salary"
+class="form-control"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label>Role</label>
+
+<select
+name="role"
+class="form-control">
+
+<option>HR</option>
+
+<option>Employee</option>
+
+</select>
+
+</div>
+
+<button class="btn btn-success">
+
+Add Employee
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+{% endblock %}

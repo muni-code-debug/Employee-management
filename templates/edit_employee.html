@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow">
+
+<div class="card-header bg-warning">
+
+<h3>Edit Employee</h3>
+
+</div>
+
+<div class="card-body">
+
+<form method="POST">
+
+<input
+type="text"
+name="name"
+class="form-control mb-3"
+value="{{ employee.name }}"
+required>
+
+<input
+type="email"
+name="email"
+class="form-control mb-3"
+value="{{ employee.email }}"
+required>
+
+<input
+type="text"
+name="department"
+class="form-control mb-3"
+value="{{ employee.department }}"
+required>
+
+<input
+type="number"
+name="salary"
+class="form-control mb-3"
+value="{{ employee.salary }}"
+required>
+
+
+
+
+
+<button class="btn btn-primary">
+
+Update Employee
+
+</button>
+
+</form>
+
+</div><select name="role" class="form-control mb-3">
+
+    <option value="HR"
+        {% if employee.role == "HR" %}selected{% endif %}>
+        HR
+    </option>
+
+    <option value="Employee"
+        {% if employee.role == "Employee" %}selected{% endif %}>
+        Employee
+    </option>
+
+</select>
+
+</div>
+
+{% endblock %}
+<div class="mb-3">
+    

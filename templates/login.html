@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+<div class="col-md-5">
+
+<div class="card shadow">
+
+<div class="card-header bg-primary text-white">
+
+<h3 class="text-center">
+
+Admin Login
+
+</h3>
+
+</div>
+
+<div class="card-body">
+
+<form method="POST">
+
+<div class="mb-3">
+
+<label>Email</label>
+
+<input
+type="email"
+name="email"
+class="form-control"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label>Password</label>
+
+<input
+type="password"
+name="password"
+class="form-control"
+required>
+
+</div>
+
+<div class="d-grid">
+
+<button class="btn btn-success">
+
+Login
+
+</button>
+
+</div>
+
+</form>
+
+<hr>
+
+<div class="text-center">
+
+<a href="/forgot_password">
+
+Forgot Password?
+
+</a>
+<hr>
+
+<div class="text-center">
+
+    Don't have an account?
+
+    <a href="{{ url_for('register') }}">
+        Register
+    </a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
